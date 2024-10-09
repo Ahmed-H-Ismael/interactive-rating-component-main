@@ -1,0 +1,119 @@
+:root{
+    --Orange-color:hsl(25, 97%, 53%);
+    --White-color:hsl(0, 0%, 100%);
+    --Light-Grey-color:hsl(217, 12%, 63%);
+    --Dark-Blue-color:hsl(213, 19%, 18%);
+    --Dark-Blue-color-o:rgb(52, 63, 76);
+    --VeryDark-Blue-color:hsl(216, 12%, 8%)
+}
+body{
+    height: 100vh;
+    background-color: var(--VeryDark-Blue-color);
+    font-family:'Overpass';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 30px);
+    height: 100%;
+}
+.rate{
+    border-radius: 10px;
+    width: 350px;
+    position: relative;
+    height: 50vh;
+    padding: 2rem;
+    background-color: var(--Dark-Blue-color);
+}
+.rate-content{
+    position: absolute;
+    top:0;
+    left:0;
+    backface-visibility: hidden;
+    height: 100%;
+    padding: 2rem;
+    transition: all .8s ease;
+}
+
+.back-rate{
+    transform: rotateY(180deg);
+}
+.front-rate.active{
+    transform: rotateY(-180deg);
+}
+.front-rate.active + .back-rate{
+    transform: rotateY(0deg);
+}
+.rate .front-rate figure{
+    margin: 0;
+    background-color: var(--Dark-Blue-color-o);
+    border-radius: 100%;
+    text-align: left;
+    width: fit-content;
+    padding: 12px;
+    line-height: .5;
+}
+.rate .front-rate h2,.back-rate h2{
+    color: var(--White-color);
+}
+.rate .front-rate p,.back-rate p{
+    color: var(--Light-Grey-color);
+    font-size: 15px;
+    line-height: 1.5;
+}
+.rate .front-rate .rate-number{
+    display: flex;
+    justify-content: space-between;
+}
+.rate .front-rate .rate-number span{
+    color: var(--Light-Grey-color);
+    background-color: var(--Dark-Blue-color-o);
+    border-radius: 100%;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    transition: all .2s;
+}
+.rate .front-rate .rate-number span:hover{
+    background-color: var(--Orange-color);
+
+    cursor: pointer;
+}
+.rate .front-rate .rate-number span.active{
+    background-color: var(--White-color);
+    color: black;
+}
+.rate .front-rate button{
+    width: 100%;
+    background-color: var(--Orange-color);
+    color: black;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    padding: .7rem;
+    margin-top: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all .2s;
+}
+.rate .front-rate button:hover{
+    background-color: var(--White-color); 
+}
+.back-rate{
+    text-align: center;
+}
+.back-rate p:first-of-type{
+    color: var(--Orange-color);
+}
