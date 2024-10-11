@@ -13,16 +13,17 @@ body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-main{
-    padding-left: 15px;
-    padding-right: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: calc(100% - 30px);
-    height: 100%;
+}
+main{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: calc(100% - 60px);
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .rate{
     border-radius: 10px;
